@@ -38,6 +38,7 @@ E:
 - There are 2 main ways to create SVG images:
 	1. Adobe Illustrator 
 	2. Create them yourself with code.  
+
 C:
 
 Note: It's more important to NOT get bogged down with details about creating SVGs, or attributes and element for SVGs but focus on knowing what is happening and why things work the way they do!
