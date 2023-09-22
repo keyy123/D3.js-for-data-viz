@@ -45,3 +45,16 @@ E:
 - Negative coordinates can change shapes to leave the container and be invisible to the user (overflow) and it's not recommended (why?)
 
 C: 
+
+
+## Q: How to create a circle SVG within HTML?
+
+E: 
+- Use the <pre><circle></pre> within an <pre><svg></pre> 
+- ```<circle r="#" cx="#" cy="#" fill="#" stroke="#" stroke-width="#"></circle>```
+- setting r (radius) sets the width and height to 2r 
+- example: r = 100, 2r = 200 (width, height)
+- cx - changes the circles coordinates on the x-axis, cy - changes the circles coordinates on the y-axis
+
+C:
+
