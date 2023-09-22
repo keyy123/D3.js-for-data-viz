@@ -6,6 +6,7 @@ D3 uses SVGs alot to make graphs and charts
 
 
 Q: What is an SVG?
+
 E: 
 - SVG = text-based image format
 - SVGs are made by code not by devices with cameras like JPEG, PNG, GIFs
@@ -19,12 +20,18 @@ this means that the size of it is smaller
 C: 
 
 
+
+
 Q: Why learn about SVG images?
+
 E: 
 - It works well with D3 b/c SVGs are flexible and works well with other web technologies. 
 C:
 
+
+
 Q: What are the cons of SVG images
+
 E: 
 - Computer needs to do calculations to make SVG images
 - The more detailed an image is, the more math that needs to be done
