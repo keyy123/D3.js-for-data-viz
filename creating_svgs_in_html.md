@@ -1,55 +1,47 @@
-# Creating an SVG image
+Q: How do we make a rectangle shaped SVG?
+E:
+1. Place shape within an SVG HTML element
+    - We use the '<rect>' tag within the '<svg>' element
+    - The browser won't draw the shape unless it's within the <svg> 
+    - This is the same for the other shapes
 
-There are 2 ways to make an SVG image:
-
-1. We can make a separate file for SVG images
-2. create an SVG image inside an HTML document
-
-note: Browser will limit SVG features if we use the files needed for D3 directly. It will be easier to work with SVGs in an HTML doc. 
-
-1. Step 1: Create a SVG image in HTML
-
-```
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>SVG Example</title>
-</head>
-<body>
-  <svg></svg>
-</body>
-</html>
-
-```
-
-The above code does the following:
-
-1. Make an inline empty svg container 
+2. Make a self-closing tag within an SVG HTML element
 
 
-* A best practice for images is to set the dimensions (width and height) * 
+## Here are a list of attribute that work on SVG shapes
 
-2. Step 2: Set dimension in SVGs
-```
-<svg width="#" height="#"></svg>
+| Attribute | Description | 
+| :--------: | :---------: |
+| *width*    | The width of the shape. Measurement in pixels. |
+| *height* | The height of the shape. Measurement in pixels. |
+| *fill* | Color of the shape. Supports any valid CSS color value. (Named, Hex RGB, RGBa, HSL, HSLa)|
+| *stroke* | Color for the border of the shape, if any. Supports any valid CSS color value. |
+| *stroke-width* | The width of the stroke. Measurement in pixels |
+| *x* | x-coordinate |
+| *y* | y-coordinate |
 
 
-<head>
-    #container {
-        width: 100%;
-        height: 100%;
-    }
-</head>
-
-<svg id="container"></svg>
-```
-
-Q: What are limitation on CSS for SVGs?
+## Q: How to change the color of an SVG shape?
 
 E: 
-- Not all CSS props work on SVGs so be aware
+- Newbies use wrong CSS props to change shape's lool
+- SVG Shapes don't use ```background-color``` or ```border``` css props
+- To use a color on a SVG shape,  use the ```fill``` property. 
+- To change the border of an SVG shape, use ```stroke``` property not ```border```
+- The width of the stroke can be changed using ```stroke-width``` prop
 
-C: SVGs are not perfect...
+
+C: Use the right CSS props for SVGs or worst case nothing happens
 
 
+## Q: How to change the coordinates of an SVG shape? 
+
+E: 
+- SVGs uses coordinates to move on the screen 
+- There are only 2 axes for SVGs: x-axis (horizontal) and y-axis (vertical)
+- Positive x (move to the right), Negative x (move to the left)
+- Positive y (move to the bottom), Negative y (move to the top)
+- If no coordinates given, The shape will be positioned on the top-left most spot on the screen.
+- Negative coordinates can change shapes to leave the container and be invisible to the user (overflow) and it's not recommended (why?)
+
+C: 
