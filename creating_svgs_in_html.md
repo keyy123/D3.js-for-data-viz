@@ -73,3 +73,16 @@ E:
 
 C: 
 
+
+Q: How do you layer SVG shapes?
+
+E:
+- Unfortunately, SVGs can't use `z-index` CSS prop to arrange how the 
+shape layer on each other. 
+- The only way to change the order of the shapes is moving the elements around in the HTML doc manually. 
+- The order they appear in the HTML doc matters (play with the order to see it yourself!)
+- The bottom-most element is the front-most element (like a z-index approaching 9999) while elements closing to the top of html doc is further to the back (z-index approaching 0)
+- Good news is D3 handles much of the issues for us
+- learn more about SVGs and how to make other shapes at MDN [here](https://developer.mozilla.org/en-US/docs/Web/SVG) 
+
+C:
