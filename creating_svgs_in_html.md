@@ -58,3 +58,18 @@ E:
 
 C:
 
+
+## Q: How to create a line SVG within HTML?
+
+E: 
+- Use the <pre><line></pre> element. 
+- Lines has the first 4 coordinates or 2 sets of points: (x1, y1), (x2, y2)
+- each individual point is a property for a line (x1, y1, x2, y2)  
+- ```<line x1="#" y1="#" x2="#" y2="#" stroke-width="10" stroke="blue"></line>```
+- (x1, y1) = starting point of line segment
+- (x2, y2) = ending point of line segment
+- `stroke` and `stroke-width` props are required to make the line visible on the browser
+- Lines have no `fill`
+
+C: 
+
