@@ -1,9 +1,4 @@
-// Exercise 1: Classes
-const d3Body = d3.select('body')
-    .append("p")
-    .classed("food", true)
-    .classed("sleep", true)
-    .style("color", "black")
-    .text("bar");
-
-console.log(d3Body);
+const data = [10, 20, 30, 40, 50];
+const el = d3.selectAll('li')
+    .data(data);
+console.log(el);
