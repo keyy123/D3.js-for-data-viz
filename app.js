@@ -1,7 +1,6 @@
 async function draw() {
     const dataset = await d3.json('./data.json');
 
-    // exercise 2 - accessors
     xAccessor = (d) => d.currently.humidity
     yAccessor = (d) => d.currently.apparentTemperature
 
@@ -25,7 +24,7 @@ async function draw() {
         .attr("transform",
         `translate(${dimensions.margin.left}, ${dimensions.margin.top})`    
     )
-    // exercise 2 - step 3 extra credit
+
     ctr.selectAll('circle')
         .data(dataset)
         .join('circle')
