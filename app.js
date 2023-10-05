@@ -14,6 +14,10 @@ async function draw() {
             left: 50
         }
     }
+
+    dimensions.ctrWidth = dimensions.width - dimensions.margin.left - dimensions.margin.right;
+    dimensions.ctrHeight = dimensions.height - dimensions.margin.top - dimensions.margin.bottom;
+
     const svg = d3.select("#chart")
         .append("svg")
         .attr("width", dimensions.width)
@@ -25,11 +29,20 @@ async function draw() {
         `translate(${dimensions.margin.left}, ${dimensions.margin.top})`    
     )
 
+    const xScales = d3.scaleLinear()
+        .domain(d3.extent(dataset, xAccessor))
+        .range([0, dimensions.ctrWidth])
+
+    const yScales = d3.scaleLinear()
+        .domain(d3.extent(dataset, yAccessor))
+        .range([0, dimensions.ctrHeight])
+    
+    
     ctr.selectAll('circle')
         .data(dataset)
         .join('circle')
-        .attr("cx", xAccessor)
-        .attr("cy", yAccessor)
+        .attr("cx", d => xScales(xAccessor(d)))
+        .attr("cy", d => yScales(yAccessor(d)))
         .attr("r", 5)
         .attr("fill", "red")
 

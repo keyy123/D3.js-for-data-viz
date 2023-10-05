@@ -48,3 +48,4 @@ exercise 1: create a scale
 
 ### Update code to be dynamic and scalable
 - Use `extent` to make domain flexible
+
